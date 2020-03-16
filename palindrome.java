@@ -10,17 +10,17 @@ public static void main(String[] args) {
         while(n>0)
         {
             r=n%10;
-            sum=sum+r*r*r;
+            sum=sum*10+r;
             n=n/10;
         }
         if(t==sum)
         {
-            System.out.println("armstrong  number"+sum);
+            System.out.println("palindrome  number"+sum);
          
         }
         else
         {
-            System.out.println("not a armstrong number"+sum);
+            System.out.println("not a palindrome number"+sum);
          
         }
       }
