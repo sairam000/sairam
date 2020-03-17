@@ -1,4 +1,4 @@
-public class Binary_format {
+class Binary_format {
     public static void main(String[] args) {
         
         int i = 0B10001;
