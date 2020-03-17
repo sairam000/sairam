@@ -10,11 +10,11 @@ class Ifelse {
             }
             else if(b>c)
             {
-                System.out.println("a is greater");
+                System.out.println("b is greater");
             }
             else
             {
-                System.out.println("a is greater");
+                System.out.println("c is greater");
             }
         
     }
