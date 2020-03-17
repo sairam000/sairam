@@ -1,4 +1,4 @@
-class Ifelse {
+class Switch_case {
 public static void main(String[] args) {
        int i=5;
         switch(i)
