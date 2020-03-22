@@ -1,0 +1,24 @@
+import java.io.*;
+class file1
+{
+public static void main(String []args)
+{
+int i;
+try
+{
+fileInputStream f=new fileInputStream("sai.txt");
+while(true)
+{
+i=f.read();
+if(i==-1)
+break;
+System.out.println((char)i);
+}
+f.close();
+}
+catch(IOexception ie)
+{
+System.out.println(ie);
+}
+}
+}
