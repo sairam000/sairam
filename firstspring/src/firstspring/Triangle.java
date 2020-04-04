@@ -2,10 +2,12 @@ package firstspring;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-public class Triangle implements ApplicationContextAware,BeanNameAware{
+public class Triangle implements InitializingBean,DisposableBean{
 	private Point pointA;
 	private Point pointB;
 	private Point pointC;
@@ -34,16 +36,19 @@ public class Triangle implements ApplicationContextAware,BeanNameAware{
 		System.out.println("point B =(" + getPointB().getX() + ","+getPointB().getY()+")");
 		System.out.println("point C =(" + getPointC().getX() +","+getPointC().getY()+")");
 	}
+	
 	@Override
-	public void setApplicationContext(ApplicationContext context) throws BeansException {
+	public void afterPropertiesSet() throws Exception {
 		// TODO Auto-generated method stub
-		this.context=context;
+		System.out.println("init method called for triangle");
+		
 		
 	}
 	@Override
-	public void setBeanName(String beanName) {
+	public void destroy() throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println("name is " +   beanName);
+		System.out.println("destroy method called for triangle");
+		
 		
 	}
 
