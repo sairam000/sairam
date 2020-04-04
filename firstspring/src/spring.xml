@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 <beans>
-<bean id="rectangle" class= "firstspring.Rectangle" >
+<bean id="Triangle" class= "firstspring.Triangle">
+<property name="pointA" ref="point1"/>
+<property name="pointB" ref="point2"/>
+<property name="pointC" ref="point3"/>
 </bean> 
-<bean id="pointA" class="firstspring.Point">
+<bean id="point1" class="firstspring.Point">
 <property name="x" value="0"/>
 <property name="y" value="0"/>
 
 </bean>
-<bean id="pointB" class="firstspring.Point">
+<bean id="point2" class="firstspring.Point">
 <property name="x" value="7"/>
 <property name="y" value="0"/>
 </bean>
 
-<bean id="pointC" class="firstspring.Point">
+<bean id="point3" class="firstspring.Point">
 <property name="x" value="7"/>
 <property name="y" value="8"/>
 </bean>
 
 </beans>
- 
