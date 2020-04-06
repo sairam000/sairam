@@ -13,9 +13,8 @@ public class Drawing {
 		
 		//BeanFactory factory=new XmlBeanFactory(new FileSystemResource("spring.xml"));
 		ApplicationContext context=new ClassPathXmlApplicationContext("spring.xml");
-		Rectangle rectangle=(Rectangle)context.getBean("rectangle");
-		rectangle.draw();
-		
+		Triangle triangle=(Triangle)context.getBean("triangle");
+		triangle.draw();
 	}
 
 }

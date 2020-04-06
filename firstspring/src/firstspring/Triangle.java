@@ -7,11 +7,10 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-public class Triangle implements InitializingBean,DisposableBean{
+public class Triangle{
 	private Point pointA;
 	private Point pointB;
 	private Point pointC;
-	private ApplicationContext context=null;
 	public Point getPointA() {
 		return pointA;
 	}
@@ -37,7 +36,7 @@ public class Triangle implements InitializingBean,DisposableBean{
 		System.out.println("point C =(" + getPointC().getX() +","+getPointC().getY()+")");
 	}
 	
-	@Override
+	/*@Override
 	public void afterPropertiesSet() throws Exception {
 		// TODO Auto-generated method stub
 		System.out.println("init method called for triangle");
@@ -50,6 +49,15 @@ public class Triangle implements InitializingBean,DisposableBean{
 		System.out.println("destroy method called for triangle");
 		
 		
+	}*/
+	public void Init()
+	{
+		System.out.println("init method called for triangle");
 	}
+	public void Destroy()
+	{
+		System.out.println("destroy method called for triangle");
+	}
+	
 
 }
