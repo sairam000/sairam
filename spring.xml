@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
-<beans>
-<bean id="rectangle" class= "firstspring.Rectangle">
-
-<constructor-arg type="java.lang.String" value="10"/>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd"
+xmlns:context="http://www.springframework.org/schema/context"
+>
+<bean id="triangle" class= "firstspring.Triangle" >
+	<property name="pointA" ref="pointA"/>
+	<property name="pointB" ref="pointB"/>
+	<property name="pointC" ref="pointC"/>
 </bean>
-    
+<bean id="pointA" class="firstspring.Point">
+<property name="x" value="8"/>
+<property name="y" value="7"/>
+
+</bean>
+ <bean id="pointB" class="firstspring.Point">
+<property name="x" value="7"/>
+<property name="y" value="0"/>
+</bean>
+
+<bean id="pointC" class="firstspring.Point">
+<property name="x" value="7"/>
+<property name="y" value="8"/>
+</bean> 
+<bean class="firstspring.BeanProcessor"/>
+<bean name="circle" class="firstspring.circle">
+<property name="center" ref="pointA"/>
+</bean>
+<bean id="messageSource" class="firstspring.Context.support.ResourceBundleMessageSource">
+<property name="baseNames">
+<list>
+<value>messages</value>
+</list>
+</property>
+</bean>
 </beans>
+<!-- <Context:annotation-config/>
+<Context:component-scan base-package="firstspring"/>
+ -->
+<!--  <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+ -->
+ 
