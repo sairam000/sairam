@@ -3,6 +3,8 @@ package service;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.ws.rs.POST;
+
 import model.Message;
 
 public class messageservice {
@@ -16,5 +18,19 @@ public class messageservice {
 		
 		return l;
 			}
+    @POST
+	public  Message addMessage(Message message) {
+		// TODO Auto-generated method stub
+		return messageservice.addMessage(message);
+	}
+
+	public static Message getmessage(long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}.
+
+	
+
+
 
 }
