@@ -18,5 +18,26 @@ public class ProfileService {
 		return l1;
 			}
 
+	public Profile addprofile(Profile profile) {
+		// TODO Auto-generated method stub
+		return Profile.addprofile(profile);
+	}
+
+	public Profile updateprofile(Profile profile) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	public Profile getprofile(String profileName) {
+		// TODO Auto-generated method stub
+		return ;
+	}
+
+	public Profile deleteProfile(Profile profile) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }
